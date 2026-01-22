@@ -3,85 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Daftar Belanja</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Rekap daftar Belanja</title>
 </head>
 <body>
-    <center>
-    <h2 class="h2">Daftar Belanja🛒🛍️ :</h2>
-    <table border="1" class="table">
-        <tr>
-            <th>NO.</th>
-            <th>Nama Barang</th>
-            <th>Harga Barang</th>
-        </tr>
-        <tr>
-            <td>1.</td>
-            <td id="nb1"></td>
-            <td id="hb1"></td>
-        </tr>
-        <tr>
-            <td>2.</td>
-            <td id="nb2"></td>
-            <td id="hb2"></td>
-        </tr>
-            <td>3.</td> 
-            <td id="nb3"></td>
-            <td id="hb3"></td>
-        <tr>
-        <tr>
-            <td>4.</td>
-            <td id="nb4"></td>
-            <td id="hb4"></td>
-        </tr>
-        <tr>
-            <td colspan="2">jumlah belanja anda =</td>
-            <td id="jumlahHB"></td>
-        </tr>    
-    </table>
-    </center>
-    <script>
-        let nb1 = document.getElementById("nb1").value;
-        let hb1 = parseFloat(document.getElementById("hb1").value);
-        let nb2 = document.getElementById("nb2").value;
-        let hb2 = parseFloat(document.getElementById("hb2").value);
-        let nb3 = document.getElementById("nb3").value;
-        let hb3 = parseFloat(document.getElementById("hb3").value);
-        let nb4 = document.getElementById("nb4").value;
-        let hb4 = parseFloat(document.getElementById("hb4").value);
+    <div class="container">
+        <div>
+            <h2 id="welcomeText" class="welcome"></h2>
+            <h2>DAFTAR BELANJA🛒</h2>
 
-        nb1 = prompt("Masukkan Nama Barang 1");
-        hb1 = Number(prompt("Masukkan Harga Barang 1"));
-        nb2 = prompt("Masukkan Nama Barang 2");
-        hb2 = Number(prompt("Masukkan Harga Barang 2"));
-        nb3 = prompt("Masukkan Nama Barang 3");
-        hb3 = Number(prompt("Masukkan Harga Barang 3"));
-        nb4 = prompt("Masukkan Nama Barang 4");
-        hb4 = Number(prompt("Masukkan Harga Barang 4"));
-        console.log(nb1);
-        console.log(hb1);
-        console.log(nb2);
-        console.log(hb2);
-        console.log(nb3);
-        console.log(hb3);
-        console.log(nb4);
-        console.log(hb4);
+            <input type="date" name="Tanggal" id="tanggal">
+            <input type="text" id="namabarang" placeholder="Nama Barang">
+            <input type="number" id="jumlahbarang" placeholder="Jumlah Barang">
+            <input type="number" id="hargabarang" placeholder="Harga Barang">
+            <button onclick="tambah()">Tambah</button>
+        </div>
 
-        document.getElementById("nb1").innerHTML = nb1;
-        document.getElementById("hb1").innerHTML = hb1;
-        document.getElementById("nb2").innerHTML = nb2;
-        document.getElementById("hb2").innerHTML = hb2;
-        document.getElementById("nb3").innerHTML = nb3;
-        document.getElementById("hb3").innerHTML = hb3;
-        document.getElementById("nb4").innerHTML = nb4;
-        document.getElementById("hb4").innerHTML = hb4;
+        <table>
+            <tr>
+                <th>Tanggal</th>
+                <th>Nama Barang</th>
+                <th>jumlah barang</th>
+                <th>Harga Barang</th>
+            </tr>
+            <tbody id="tabel"></tbody>
+        </table>
 
-        let jumlahHB;
-
-        jumlahHB = hb1 + hb2 + hb3 + hb4;
-        console.log("jumlah harga barang =", jumlahHB);
-
-        document.getElementById("jumlahHB").innerHTML = jumlahHB;
-    </script>
+        <h3 id="total">Total Barang :</h3>
+        <button class="logout" onclick="logout()">Logout</button>
+    </div>
 </body>
 </html>
