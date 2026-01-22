@@ -1,0 +1,29 @@
+
+body { 
+    font-family: 'Times New Roman', Times, serif; 
+    justify-content: center; 
+    align-items: center; 
+    margin: 150px; 
+    background-image: url(Premium\ Vector\ _\ Sales\ during\ shopping\ and\ purchase\ concept.jpeg);
+    background-size: 80%;
+    padding: 5px;
+}
+
+h2 {
+    font-family: 'Times New Roman', Times, serif; 
+    text-align: center;
+    color: brown;
+} 
+
+.table {
+    width: 70%; 
+    height: 50hv; 
+    color: rgb(43, 41, 28); 
+    text-align: center; 
+    margin-left: 100px; 
+    background-color: bisque;
+} 
+
+.tombol { 
+    margin: 10px; 
+}
